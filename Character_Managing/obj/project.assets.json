@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kaydonshapiro/Programming/Character_Managing/Character_Managing.csproj",
+      "projectUniqueName": "/Users/kaydonshapiro/Programming/Personal Programs/Character_Managing-1/Character_Managing/Character_Managing.csproj",
       "projectName": "Character_Managing",
-      "projectPath": "/Users/kaydonshapiro/Programming/Character_Managing/Character_Managing.csproj",
+      "projectPath": "/Users/kaydonshapiro/Programming/Personal Programs/Character_Managing-1/Character_Managing/Character_Managing.csproj",
       "packagesPath": "/Users/kaydonshapiro/.nuget/packages/",
-      "outputPath": "/Users/kaydonshapiro/Programming/Character_Managing/obj/",
+      "outputPath": "/Users/kaydonshapiro/Programming/Personal Programs/Character_Managing-1/Character_Managing/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/kaydonshapiro/.nuget/NuGet/NuGet.Config"
