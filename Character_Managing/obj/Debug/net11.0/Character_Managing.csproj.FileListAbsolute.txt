@@ -1,0 +1,16 @@
+/Users/kaydonshapiro/Programming/Character_Managing/obj/Debug/net11.0/Character_Managing.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kaydonshapiro/Programming/Character_Managing/obj/Debug/net11.0/Character_Managing.AssemblyInfoInputs.cache
+/Users/kaydonshapiro/Programming/Character_Managing/obj/Debug/net11.0/Character_Managing.AssemblyInfo.cs
+/Users/kaydonshapiro/Programming/Character_Managing/obj/Debug/net11.0/Character_Managing.csproj.CoreCompileInputs.cache
+/Users/kaydonshapiro/Programming/Character_Managing/bin/Debug/net11.0/Character_Managing
+/Users/kaydonshapiro/Programming/Character_Managing/bin/Debug/net11.0/Character_Managing.deps.json
+/Users/kaydonshapiro/Programming/Character_Managing/bin/Debug/net11.0/Character_Managing.runtimeconfig.json
+/Users/kaydonshapiro/Programming/Character_Managing/bin/Debug/net11.0/Character_Managing.runtimeconfig.dev.json
+/Users/kaydonshapiro/Programming/Character_Managing/bin/Debug/net11.0/Character_Managing.dll
+/Users/kaydonshapiro/Programming/Character_Managing/bin/Debug/net11.0/Character_Managing.pdb
+/Users/kaydonshapiro/Programming/Character_Managing/obj/Debug/net11.0/Character_Managing.dll
+/Users/kaydonshapiro/Programming/Character_Managing/obj/Debug/net11.0/refint/Character_Managing.dll
+/Users/kaydonshapiro/Programming/Character_Managing/obj/Debug/net11.0/Character_Managing.pdb
+/Users/kaydonshapiro/Programming/Character_Managing/obj/Debug/net11.0/Character_Managing.genruntimeconfig.cache
+/Users/kaydonshapiro/Programming/Character_Managing/obj/Debug/net11.0/ref/Character_Managing.dll
+/Users/kaydonshapiro/Programming/Character_Managing/obj/Debug/net11.0/Characte.FB1CF362.Up2Date
