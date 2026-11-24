@@ -3,12 +3,12 @@ Description: Human Mandalorian Bounty Hunter (Ranger)
 Base Max HP: 126
 Actual Max HP: 126
 Temporary HP: 0
-Current HP: 126
+Current HP: 86
 Spell Slots:
-Level 1: 4/4
-Level 2: 3/3
-Level 3: 3/3
-Level 4: 1/1
+Level 1: 0/4
+Level 2: 0/3
+Level 3: 0/3
+Level 4: 0/1
 
 Hit Die: 14 out of 14d10
 Ability Name: Nature's Veil
