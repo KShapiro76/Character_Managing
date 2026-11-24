@@ -1,0 +1,31 @@
+Name: Ferrin Tarre
+Description: Human Mandalorian Bounty Hunter (Ranger)
+Base Max HP: 126
+Actual Max HP: 126
+Temporary HP: 0
+Current HP: 126
+Spell Slots:
+Level 1: 4/4
+Level 2: 3/3
+Level 3: 3/3
+Level 4: 1/1
+
+Hit Die: 14 out of 14d10
+Ability Name: Nature's Veil
+     Description: Brief Invisibility
+     Uses: 5/5 -> Recharges: 5 every Long Rest
+Ability Name: Tireless
+     Description: Gain temp HP
+     Uses: 5/5 -> Recharges: 5 every Long Rest
+Ability Name: Speak with Animals
+     Description: Cast Speak with Animals Spell
+     Uses: 1/1 -> Recharges: 1 every Long Rest
+Ability Name: Beast Sense
+     Description: Cast Beast Sense Spell
+     Uses: 1/1 -> Recharges: 1 every Long Rest
+Ability Name: Speak with Plants
+     Description: Cast Speak with Plants spell
+     Uses: 1/1 -> Recharges: 1 every Long Rest
+Ability Name: Gem of Seeing
+     Description: Grant truesight of 120 feet for 10 minutes
+     Uses: 3/3 -> Recharges: 1d3 every Day (At Dawn)
