@@ -10,17 +10,61 @@ public class SpellSlots : BasicForm
     public void CreateSpellSlots()
     {
         Console.WriteLine("Does your character have spell slots? (yes/no)");
-        bool _hasSpellSlots = Console.ReadLine().Trim().ToLower() == "yes";
+        bool boolFound = false;
+        do
+        {
+        string boolInput = Console.ReadLine();
+        if (boolInput.Trim().ToLower() == "yes" || boolInput.Trim().ToLower() == "y")
+        {
+            _hasSpellSlots = true;
+            boolFound = true;
+        }
+        else if (boolInput.Trim().ToLower() == "no" || boolInput.Trim().ToLower() == "n")
+        {
+            _hasSpellSlots = false;
+            boolFound = true;
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please try again.");
+        }
+        } while (!boolFound);
         if (_hasSpellSlots)
         {
             Console.WriteLine("Enter the maximum number of spell slots for each level (1-9).");
             
             for (int i = 0; i < 9; i++)
             {
-                Console.WriteLine($"Enter maximum spell slots for level {i + 1}:");
-                _maxSpellSlots[i] = GetIntInput();
-                Console.WriteLine($"Enter current spell slots for level {i + 1}:");
-                _currentSpellSlots[i] = GetIntInput();
+                Console.Write($"Level {i + 1} (E.g. '4/4'): ");
+                string input = Console.ReadLine();
+                if (!input.Contains("/"))
+                {
+                    Console.WriteLine("Invalid format. Please try again.");
+                    i--;
+                }
+                else
+                {
+                    string[] SpellSlots = input.Trim().Split("/");
+                    if (int.TryParse(SpellSlots[0], out int number) && int.TryParse(SpellSlots[1], out int number2))
+                    {
+                    _maxSpellSlots[i] = int.Parse(SpellSlots[1]);
+                    _currentSpellSlots[i] = int.Parse(SpellSlots[0]);
+                    if (_maxSpellSlots[i] == 0)
+                    {
+                        for (int index = i; index < 9; index++)
+                        {
+                            _maxSpellSlots[index] = 0;
+                            _currentSpellSlots[index] = 0;
+                        }
+                        return;
+                    }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid format. Please try again.");
+                        i--;
+                    }
+                }
             }
         }
     }
@@ -31,24 +75,41 @@ public class SpellSlots : BasicForm
             for (int i = 0; i < 9; i++)
             {
                 Console.Write($"Level {i + 1} (E.g. '4/4'): ");
-                string[] SpellSlots = Console.ReadLine().Trim().Split("/");
-                _maxSpellSlots[i] = int.Parse(SpellSlots[1]);
-                _currentSpellSlots[i] = int.Parse(SpellSlots[0]);
-                if (_maxSpellSlots[i] == 0)
+                string input = Console.ReadLine();
+                if (!input.Contains("/"))
                 {
-                    for (int index = i; index < 9; index++)
+                    Console.WriteLine("Invalid format. Please try again.");
+                    i--;
+                }
+                else
+                {
+                    string[] SpellSlots = input.Trim().Split("/");
+                    if (int.TryParse(SpellSlots[0], out int number) || int.TryParse(SpellSlots[1], out int number2))
                     {
-                        _maxSpellSlots[index] = 0;
-                        _currentSpellSlots[index] = 0;
+                    _maxSpellSlots[i] = int.Parse(SpellSlots[1]);
+                    _currentSpellSlots[i] = int.Parse(SpellSlots[0]);
+                    if (_maxSpellSlots[i] == 0)
+                    {
+                        for (int index = i; index < 9; index++)
+                        {
+                            _maxSpellSlots[index] = 0;
+                            _currentSpellSlots[index] = 0;
+                        }
+                        return;
                     }
-                    return;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid format. Please try again.");
+                        i--;
+                    }
                 }
             }
     }
     public override void LoadFromFile(string[] lines)
     {
         int spellSlotStartIndex;
-        if (lines[7].Trim() == "no spell slots available.")
+        if (lines[0].Trim() == "no spell slots available.")
         {
             _hasSpellSlots = false;
             return;
@@ -57,6 +118,30 @@ public class SpellSlots : BasicForm
         {
             _hasSpellSlots = true;
             spellSlotStartIndex = Array.FindIndex(lines, line => line.StartsWith("Spell Slots:"));
+            if (spellSlotStartIndex != -1)
+            {
+                int spellSlotEndIndex = Array.FindIndex(lines, spellSlotStartIndex + 1, line => string.IsNullOrWhiteSpace(line));
+                if (spellSlotEndIndex == -1)
+                {
+                    spellSlotEndIndex = lines.Length;
+                }
+                for (int i = spellSlotStartIndex + 1; i < spellSlotEndIndex; i++)
+                {
+                    if (lines[i].StartsWith("Level"))
+                    {
+                        string[] slotValues = lines[i].Substring(9).Split('/');
+                        if (slotValues.Length == 2)
+                        {
+                            int level = i - spellSlotStartIndex; // Level is determined by the index
+                            if (level >= 1 && level <= 9)
+                            {
+                                _currentSpellSlots[level - 1] = int.Parse(slotValues[0]);
+                                _maxSpellSlots[level - 1] = int.Parse(slotValues[1]);
+                            }
+                        }
+                    }
+                }
+            }
 
         }
         if (spellSlotStartIndex != -1)

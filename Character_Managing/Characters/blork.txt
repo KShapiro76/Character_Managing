@@ -1,0 +1,10 @@
+Name: blork
+Description: bleh
+Base Max HP: 40
+Actual Max HP: 40
+Temporary HP: 40
+Current HP: 40
+Spell Slots:
+Level 1: 2/2
+
+Hit Die: 1 out of 1d8

@@ -1,0 +1,7 @@
+Name: bleh
+Description: ok
+Base Max HP: 0
+Actual Max HP: 0
+Temporary HP: 0
+Current HP: 0
+No spell slots available.

@@ -85,6 +85,7 @@ public class Character : BasicForm
         _temporaryHP = GetIntInput();
         Console.WriteLine("Enter current hit points:");
         _currentHP = GetIntInput();
+        
         _spellSlots.CreateSpellSlots();
         _hitDies.CreateHitDieList();
         _abilities.CreateAbilitiesList();
